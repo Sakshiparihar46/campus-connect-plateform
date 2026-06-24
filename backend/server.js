@@ -1,6 +1,7 @@
 const express=require('express');
 const app=express();
 const {connectDB}=require("./config/db");
+const {userRoutes}=require('./routes/userRoutes.js') ;
 
 
 app.use(express.json());

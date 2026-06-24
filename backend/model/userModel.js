@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const userShema=new mongoose.Schema({
+import mongoose from"mongoose";
+const userSchema=new mongoose.Schema({
     student_id:{
         type:String,
         require:true
