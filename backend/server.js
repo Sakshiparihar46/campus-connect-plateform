@@ -5,7 +5,7 @@ app.use(express.urlencoded({ extended: true }));
 let port=3000;
 
 app.get("/",(req,res)=>{
-    req.send("hello");
+    res.send("hello");
 }); 
 
 
