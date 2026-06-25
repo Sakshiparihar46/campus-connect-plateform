@@ -27,6 +27,11 @@ const addbook = async (req, res) => {
       return res.status(400).json({ success: false, message: "Image file is required" });
     }
 
+    const ownerId = req.user?.id || req.userId || req.body?.userId;
+    if (!ownerId) {
+      return res.status(401).json({ success: false, message: "not authorized login first" });
+    }
+
     const uploadResult = await uploadToCloudinary(req.file.buffer);
     const book = new bookModel({
       book_name: req.body.book_name,
@@ -35,9 +40,9 @@ const addbook = async (req, res) => {
       category: req.body.category,
       image: uploadResult.secure_url,
       imagePublicId: uploadResult.public_id,
-      contact_no:req.body.contact_no,
-      price:req.body.price,
-      email:req.body.email
+      contact_no: req.body.contact_no,
+      email: req.body.email,
+      owner: ownerId
     });
 
     await book.save();
@@ -63,9 +68,14 @@ const listBook = async (req, res) => {
 const removeBook = async (req, res) => {
   try {
     const book = await bookModel.findById(req.body.id);
-    if (book?.imagePublicId) {
-      await cloudinary.uploader.destroy(food.imagePublicId);
+    if (!book) {
+      return res.status(404).json({ success: false, message: "book not found" });
     }
+
+    if (book?.imagePublicId) {
+      await cloudinary.uploader.destroy(book.imagePublicId);
+    }
+
     await bookModel.findByIdAndDelete(req.body.id);
     res.json({ success: true, message: "removed" });
   } catch (err) {
