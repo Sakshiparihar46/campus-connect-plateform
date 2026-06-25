@@ -2,6 +2,7 @@ import express from 'express';
 const app=express();
 import {connectDB} from "./config/db.js";
 import {userRouter} from './routes/userRoutes.js';
+import {bookRouter} from "./routes/bookRoutes.js";
 
 
 app.use(express.json());
@@ -10,6 +11,7 @@ let port=3000;
 connectDB();
 
 app.use("/",userRouter);
+app.use("/",bookRouter);
 
 
 app.get("/",(req,res)=>{
