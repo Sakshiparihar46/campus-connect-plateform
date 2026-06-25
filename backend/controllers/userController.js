@@ -8,12 +8,12 @@ import validator from 'validator';
     const {student_id,email,password}=req.body;
     try{
         const user=await userModel.findOne({email});
-        const student_id=await userModel.findOne({student_id});
-
+        
         if(!user){
             return res.json({success:false,message:"user doesn't exist"});
         }
-        if(!student_id){
+        const student=await userModel.findOne({student_id});
+        if(!student){
             return res.json({success:false,message:"this student id doesn't exist"});
         }
         const isMatch=await bcrypt.compare(password,user.password);
@@ -35,7 +35,7 @@ const createToken=(id)=>{
 }
 // register user
 const registerUser = async (req, res) => {
-    const {name,password,email}=req.body;
+    const {student_id,password,email}=req.body;
     try{
 
         //checking email is in the database or not
@@ -59,7 +59,7 @@ const registerUser = async (req, res) => {
        const hashedPassword=await bcrypt.hash(password,salt);
 
        const newUser=new userModel({
-        name:name,
+        student_id:student_id,
         email:email,
         password:hashedPassword
        })

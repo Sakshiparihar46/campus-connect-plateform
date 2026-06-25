@@ -8,6 +8,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 let port=3000;
 connectDB();
+
+app.use("/",userRouter);
+
+
 app.get("/",(req,res)=>{
     res.send("hello");
 }); 
