@@ -3,6 +3,7 @@ const app=express();
 import {connectDB} from "./config/db.js";
 import {userRouter} from './routes/userRoutes.js';
 import {bookRouter} from "./routes/bookRoutes.js";
+import cors from 'cors'
 
 
 app.use(express.json());
@@ -10,6 +11,11 @@ app.use(express.urlencoded({ extended: true }));
 let port=3000;
 connectDB();
 
+app.use(cors({
+  origin:[ "http://localhost:5174/"
+  ], 
+  credentials: true
+}));
 app.use("/",userRouter);
 app.use("/",bookRouter);
 
