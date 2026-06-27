@@ -16,8 +16,8 @@ app.use(cors({
   ], 
   credentials: true
 }));
-app.use("/",userRouter);
-app.use("/",bookRouter);
+app.use("/api/user",userRouter);
+app.use("/api/book",bookRouter);
 
 
 app.get("/",(req,res)=>{

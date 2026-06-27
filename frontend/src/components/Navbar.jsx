@@ -1,18 +1,14 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
+import { assets } from '../assets/assets'
+import './Navbar.css'
 
-export class Navbar extends Component {
-  static propTypes = {
-
-  }
-
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+const Navbar = () => {
+  return (
+    <div className='profile'>
+      <img src={assets.profile_icon} alt='profile' />
+    </div>
+  )
 }
 
 export default Navbar
+
