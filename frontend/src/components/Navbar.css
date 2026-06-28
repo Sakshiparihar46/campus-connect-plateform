@@ -1,3 +1,19 @@
+.navbar{
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-left{
+    display: flex;
+    gap: 40px;
+    color:#63709b;
+    font-size: 20px;
+}
+.navbar-left a{
+    cursor: pointer;
+    text-decoration: none;
+}
 .profile{
     width: 20px;
 }

@@ -6,7 +6,7 @@ import {Link, useNavigate} from 'react-router-dom';
 const Navbar = () => {
   const [menu,setMenu]=useState("Home");
   return (<div className='navbar'>
-    <div className='navbar-left'>
+      <ul className='navbar-left'>
       <div className='profile'>
         <img src={assets.profile_icon} alt='profile' />
       </div>
@@ -14,9 +14,10 @@ const Navbar = () => {
       <Link to="/books" onClick={()=>setMenu("Books")} className={menu==="Books"?"active":""}>Books</Link>
       <Link to="/notes" onClick={()=>setMenu("Notes")} className={menu==="Notes"?"active":""}>Notes</Link>
       <Link to="/internships" onClick={()=>setMenu("internships")} className={menu==="internships"?"active":""}>internships</Link>
-      <Link to="/collegeEvents" onClick={()=>setMenu("college Events")} className={menu==="college Events"?"active":""}>college Events</Link>
+      <Link to="/collegeEvents" onClick={()=>setMenu("Events")} className={menu==="Events"?"active":""}>Events</Link>
+      </ul>
 
-    </div>
+      
   </div>
 
   )
