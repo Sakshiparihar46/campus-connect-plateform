@@ -5,6 +5,7 @@ const StoreContextProvider=(props)=>{
 const [token,setToken]=useState("");
 const url="http://localhost:3000"
 const contextValue={
+    url,
     token,
     setToken
 }
