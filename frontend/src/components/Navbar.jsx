@@ -1,10 +1,19 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import { assets } from '../assets/assets'
 import './Navbar.css'
 import {Link, useNavigate} from 'react-router-dom';
+import {StoreContext} from '../context/Context'
 
 const Navbar = () => {
   const [menu,setMenu]=useState("Home");
+  const {token,setToken}=useContext(StoreContext);
+  const navigate=useNavigate();
+  const logOut=()=>{
+    localStorage.removeItem("token");
+    setToken("");
+    navigate("/");
+  }
+
   return (<div className='navbar'>
       <ul className='navbar-left'>
       <div className='profile'>
@@ -17,7 +26,7 @@ const Navbar = () => {
       <Link to="/collegeEvents" onClick={()=>setMenu("Events")} className={menu==="Events"?"active":""}>Events</Link>
       </ul>
 
-      
+
   </div>
 
   )
