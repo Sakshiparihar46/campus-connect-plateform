@@ -7,10 +7,12 @@ import Internships from'./pages/Internships'
 import Home from './pages/Home'
 import Events from './pages/Events'
 import Notes from './pages/Notes'
+import LoginPopup from './components/LoginPopup'
 function App() {
-
+  const [showLogin,setShowLogin]=useState(false);
   return (
     <>
+    {showLogin?< LoginPopup setShowLogin={setShowLogin}/>:<></>}
     <Navbar/>
     <Routes>
     <Route path='/' element={<Home/>}/>
