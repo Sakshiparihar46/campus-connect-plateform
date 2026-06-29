@@ -17,3 +17,37 @@
 .profile{
     width: 20px;
 }
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap:40px;
+}
+
+.navbar Button{
+    background:transparent;
+    font-size:16px;
+    color:#49557e;
+    border: 1px solid rgb(78, 184, 226);
+    padding: 10px 30px;
+    border-radius:50px;
+    cursor: pointer;
+    transition:0.3s;
+}
+.navbar button:hover{
+    background-color: rgb(199, 237, 252);
+}
+
+.navbar-right li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 35px;
+    font-size: 20px;
+    color:#5e6d9c;
+    
+}
+
+.navbar-right img{
+    color: black;
+    width: 30px;
+}
