@@ -2,6 +2,7 @@ import React,{useContext,useState} from 'react'
 import axios from 'axios';
 import {StoreContext} from '../context/Context'
 import {assets} from '../assets/assets'
+import "./LoginPopup.css"
 
 export default function LoginPopup({setShowLogin}) {
     const {url,setToken}=useContext(StoreContext);
@@ -24,7 +25,7 @@ export default function LoginPopup({setShowLogin}) {
     const onLogin=async(event)=>{
         event.preventDefault();
         let newUrl=url;
-        if(currState=="Login"){
+        if(currState==="Login"){
             newUrl+="/api/user/login"
         }else{
             newUrl+="/api/user/register"
@@ -36,7 +37,7 @@ export default function LoginPopup({setShowLogin}) {
             localStorage.setItem("token",response.data.token);
             setShowLogin(false);
         }else{
-            alert(response.data.mesaage);
+            alert(response.data.message);
         }
     }
 
@@ -49,11 +50,11 @@ export default function LoginPopup({setShowLogin}) {
             <img onClick={()=>setShowLogin(false)}src={assets.cross_icon} alt="" />
         </div>
         <div className='login-popup-input'>
-        <input name="Student_Id" type='text' onChange={onChangeHandler} value={data.Student_Id} placeholder='your student id' autocomplete='off' required />
-        <input name='email' type='email' onChange={onChangeHandler} value={data.email} placeholder='please enter your email' autocomplete='email' required />
-        <input name='password' type='password' onChange={onChangeHandler} value={data.password} placeholder='type your password' autocomplete='current-password' required />
+        <input name="Student_Id" type='text' onChange={onChangeHandler} value={data.Student_Id} placeholder='your student id' autoComplete='off' required />
+        <input name='email' type='email' onChange={onChangeHandler} value={data.email} placeholder='please enter your email' autoComplete='email' required />
+        <input name='password' type='password' onChange={onChangeHandler} value={data.password} placeholder='type your password' autoComplete='current-password' required />
         </div>
-        <button type='submit'>{currState=="Sign Up"?"Create Account":"Login"}</button>
+        <button type='submit'>{currState==="Sign Up"?"Create Account":"Login"}</button>
         <div className="login-popup-condition">
           <input type="checkbox" required/>
           <p>By continuing, i agree to the terms of use & privacy policy. </p>
