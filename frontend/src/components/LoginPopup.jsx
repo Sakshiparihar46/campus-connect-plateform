@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext,useState} from 'react'
 import axios from 'axios';
 import {StoreContext} from '../context/Context'
 import {assets} from '../assets/assets'
@@ -16,7 +16,7 @@ export default function LoginPopup({setShowLogin}) {
 
 
     const onChangeHandler=(event)=>{
-        const name=event.target.value;
+        const name=event.target.name;
         const value=event.target.value;
         setData(data=>({...data,[name]:value}));
     }
@@ -49,11 +49,11 @@ export default function LoginPopup({setShowLogin}) {
             <img onClick={()=>setShowLogin(false)}src={assets.cross_icon} alt="" />
         </div>
         <div className='login-popup-input'>
-        <input type='text'onChange={onChangeHandler} value={data.Student_Id} placeholder='your student id' required>Student_Id</input>
-        <input type='email'onChange={onChangeHandler} value={data.email} placeholder='please enter your email' required>email</input>
-        <input type='password'onChange={onChangeHandler} value={data.email} placeholder='type your password' required>password</input>
+        <input name="Student_Id" type='text' onChange={onChangeHandler} value={data.Student_Id} placeholder='your student id' autocomplete='off' required />
+        <input name='email' type='email' onChange={onChangeHandler} value={data.email} placeholder='please enter your email' autocomplete='email' required />
+        <input name='password' type='password' onChange={onChangeHandler} value={data.password} placeholder='type your password' autocomplete='current-password' required />
         </div>
-        <button type='submit'>{currState=="sign up"?"Create Account":"Login"}</button>
+        <button type='submit'>{currState=="Sign Up"?"Create Account":"Login"}</button>
         <div className="login-popup-condition">
           <input type="checkbox" required/>
           <p>By continuing, i agree to the terms of use & privacy policy. </p>

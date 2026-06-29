@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     {showLogin?< LoginPopup setShowLogin={setShowLogin}/>:<></>}
-    <Navbar/>
+    <Navbar setShowLogin={setShowLogin}/>
     <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/books' element={<Books/>}/>
