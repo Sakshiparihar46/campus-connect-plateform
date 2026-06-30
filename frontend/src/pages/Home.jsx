@@ -1,9 +1,10 @@
 import React from 'react'
-
+import { assets } from '../assets/assets'
+import './Home.css'
 function Home() {
   return (
-    <div>
-      this is our home
+    <div className='home-image'>
+      <img src={assets.college_campus}/>
     </div>
   )
 }

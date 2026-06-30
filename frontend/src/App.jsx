@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Events from './pages/Events'
 import Notes from './pages/Notes'
 import LoginPopup from './components/LoginPopup'
+import Footer from './components/Footer'
 function App() {
   const [showLogin,setShowLogin]=useState(false);
   return (
@@ -21,6 +22,7 @@ function App() {
     <Route path='/internships'element={<Internships/>}/>
     <Route path='/collegeEvents' element={<Events/>}/>
     </Routes>
+    <Footer/>
     </>
   )
 }
