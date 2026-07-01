@@ -9,6 +9,7 @@ import Events from './pages/Events'
 import Notes from './pages/Notes'
 import LoginPopup from './components/LoginPopup'
 import Footer from './components/Footer'
+import Add from './pages/Add'
 function App() {
   const [showLogin,setShowLogin]=useState(false);
   return (
@@ -21,6 +22,7 @@ function App() {
     <Route path='/notes' element={<Notes/>}/>
     <Route path='/internships'element={<Internships/>}/>
     <Route path='/collegeEvents' element={<Events/>}/>
+    <Route path='/add' element={<Add/>}/>
     </Routes>
     <Footer/>
     </>
