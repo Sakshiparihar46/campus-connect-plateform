@@ -7,7 +7,7 @@ const bookRouter=express.Router();
 const upload=multer({storage:multer.memoryStorage()});
 
 bookRouter.post('/add',authMiddleware,upload.single('image'),addbook);
-bookRouter.get("/list",authMiddleware,listBook);
+bookRouter.get("/list",listBook);
 bookRouter.post("/remove",authMiddleware,removeBook);
 
 export  {bookRouter};
