@@ -1,0 +1,50 @@
+.add{
+    width:70%;
+    margin-left:30px;
+    color:#6d6d6d;
+    font-size: 16px;
+}
+
+.add form{
+    gap: 5px;
+}
+.add-img-upload img{
+    width: 120px;
+}
+.add-book-name,.add-book-description{
+    width: max(40%,280px);
+}
+.add-book-name input,.add-book-description textarea{
+    padding: 10px;
+}
+.add-category-price{
+    display: flex;
+    gap: 30px;
+}
+.add-category-price select,.add-category-price input{
+    max-width: 150px;
+    padding: 5px;
+}
+.add-contact{
+    padding:10px;
+}
+.add-email{
+    padding:10px;
+}
+.add-contact input{
+    padding:10px;
+}
+.add-email input{
+    padding:10px;
+}
+.add-btn{
+    max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: #49557e;
+    color:white ;
+    cursor: pointer;
+    margin-left:10px;
+    border-radius: 50px;
+    width: 100%;
+}

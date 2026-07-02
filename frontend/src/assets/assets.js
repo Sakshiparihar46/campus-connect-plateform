@@ -7,6 +7,7 @@ import facebook_icon from "./facebook_icon.png"
 import twitter_icon from './twitter_icon.png'
 import linkedin_icon from './linkedin_icon.png'
 import add_icon from './add_icon.png'
+import upload_area from './upload_area.png'
 
 export const assets={
     profile_icon,
@@ -17,5 +18,6 @@ export const assets={
     twitter_icon,
     logo,
     facebook_icon,
-    add_icon
+    add_icon,
+    upload_area
 }
