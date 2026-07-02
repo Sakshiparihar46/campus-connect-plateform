@@ -1,16 +1,23 @@
 import React, { useState } from 'react'
 import BookDisplay from '../components/BookDisplay'
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {assets} from '../assets/assets.js'
+import './Books.css'
 function Books() {
   
   const [category,setCategory]=useState("All");
+  const navigate = useNavigate();
+  
+  const handleAddClick = () => {
+    navigate('/add');
+  }
+  
   return (
     <div>
-      <NavLink to='/add' className="sidebar-option">
-          <img src={assets.add_icon} alt="" />
-          <p>Add Items</p>
-        </NavLink>
+      <div className="add-option">
+          <img className='add-option-img' onClick={handleAddClick} src={assets.add_icon} alt="" />
+          <p className='add-option-content' onClick={handleAddClick}>Add Books</p>
+        </div>
       <BookDisplay category={category}/>
     </div>
   )
