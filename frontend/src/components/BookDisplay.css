@@ -1,9 +1,8 @@
 
 .book-display-list{
-    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
     margin-top: 30px;
-    gap: 30px;
+    gap: 40px;
     row-gap: 30px;
 }

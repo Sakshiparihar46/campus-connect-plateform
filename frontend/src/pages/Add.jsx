@@ -6,7 +6,7 @@ import  axios  from 'axios';
 import "./Add.css"
 function Add() {
   const [image,setImage]=useState(false);
-  const {url,token}=useContext(StoreContext);
+  const {url,token,fetchBookList}=useContext(StoreContext);
   const [data,setData]=useState({
     book_name:"",
     contact_no:"",
@@ -39,13 +39,14 @@ function Add() {
           token:token
         }
       });
+      await fetchBookList();
       if(response.data.success){
         setData({
           book_name:"",
           contact_no:"",
           description:"",
           price:"",
-          category:"engineering",
+          category:"Engineering",
           email:""
         });
         setImage(false);

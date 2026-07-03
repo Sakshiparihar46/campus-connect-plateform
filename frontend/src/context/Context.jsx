@@ -9,13 +9,6 @@ const url="http://localhost:3000"
 const [bookList,setBookList]=useState([]);
 
 
-const contextValue={
-    url,
-    token,
-    setToken,
-    bookList
-}
-
 const fetchBookList=async()=>{
     const response=await axios.get(`${url}/api/book/list`);
     setBookList(response.data.data);
@@ -28,7 +21,13 @@ useEffect(()=>{
     loadData();
    },[]);
 
-
+const contextValue={
+    url,
+    token,
+    setToken,
+    bookList,
+    fetchBookList
+}
 return (
     <StoreContext.Provider value={contextValue}>
             {props.children}

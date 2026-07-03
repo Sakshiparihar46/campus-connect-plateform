@@ -10,10 +10,12 @@ import Notes from './pages/Notes'
 import LoginPopup from './components/LoginPopup'
 import Footer from './components/Footer'
 import Add from './pages/Add'
+import { ToastContainer, toast } from 'react-toastify';
 function App() {
   const [showLogin,setShowLogin]=useState(false);
   return (
     <>
+    <ToastContainer/>
     {showLogin?< LoginPopup setShowLogin={setShowLogin}/>:<></>}
     <Navbar setShowLogin={setShowLogin}/>
     <Routes>
