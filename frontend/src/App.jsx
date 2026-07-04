@@ -10,6 +10,7 @@ import Notes from './pages/Notes'
 import LoginPopup from './components/LoginPopup'
 import Footer from './components/Footer'
 import Add from './pages/Add'
+import AddInternship from './pages/AddInternship'
 import { ToastContainer, toast } from 'react-toastify';
 function App() {
   const [showLogin,setShowLogin]=useState(false);
@@ -24,7 +25,8 @@ function App() {
     <Route path='/notes' element={<Notes/>}/>
     <Route path='/internships'element={<Internships/>}/>
     <Route path='/collegeEvents' element={<Events/>}/>
-    <Route path='/add' element={<Add/>}/>
+    <Route path='/book/add' element={<Add/>}/>
+    <Route path='/internship/add' element={<AddInternship/>}/>
     </Routes>
     <Footer/>
     </>

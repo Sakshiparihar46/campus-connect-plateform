@@ -7,6 +7,7 @@ const StoreContextProvider=(props)=>{
 const [token,setToken]=useState("");
 const url="http://localhost:3000"
 const [bookList,setBookList]=useState([]);
+const [internshipList,setInternshipList]=useState([]);
 
 
 const fetchBookList=async()=>{
@@ -14,9 +15,15 @@ const fetchBookList=async()=>{
     setBookList(response.data.data);
   }
 
+const fetchInternshipList=async()=>{
+    const response=await axios.get(`${url}/api/internship/list`);
+    setInternshipList(response.data.data);
+  }
+
 useEffect(()=>{
     async function loadData(){
         await fetchBookList();
+        await fetchInternshipList();
     }
     loadData();
    },[]);
@@ -26,7 +33,9 @@ const contextValue={
     token,
     setToken,
     bookList,
-    fetchBookList
+    fetchBookList,
+    internshipList,
+    fetchInternshipList
 }
 return (
     <StoreContext.Provider value={contextValue}>

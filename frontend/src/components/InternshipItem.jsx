@@ -1,0 +1,37 @@
+import React,{useContext} from 'react'
+import { toast } from 'react-toastify';
+import { StoreContext } from '../context/Context'
+import { assets } from '../assets/assets'
+import axios from 'axios';
+function InternshipItem({ id, image, link }) {
+  const { token, url, fetchInternshipList } = useContext(StoreContext);
+
+  const removeInternship = async (internshipId) => {
+    try {
+      const response = await axios.post(url + "/api/internship/remove", { id:internshipId}, { headers: { "Authorization": `Bearer ${token}` } });
+      await fetchInternshipList();
+      if (response.data.success) {
+        toast.success(response.data.message);
+      } else {
+        toast.error("error");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+
+  return (
+    <div className='internship-item'>
+      <div>
+        <img className='internship-item-img' src={image}></img>
+      </div>
+      <div className='internship-item-info'>
+        {token ? <img onClick={() => removeInternship(id)} className="internship-item-image" src={assets.cross_icon} alt="" /> : <></>}
+        <a target='_blank' className='internship-item-link'>{link}</a>
+      </div>
+    </div>
+  )
+}
+
+export default InternshipItem
