@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import { StoreContext } from '../context/Context'
 import { assets } from '../assets/assets'
 import axios from 'axios';
+import './InternshipItem.css';
 function InternshipItem({ id, image, link }) {
   const { token, url, fetchInternshipList } = useContext(StoreContext);
 
@@ -28,7 +29,7 @@ function InternshipItem({ id, image, link }) {
       </div>
       <div className='internship-item-info'>
         {token ? <img onClick={() => removeInternship(id)} className="internship-item-image" src={assets.cross_icon} alt="" /> : <></>}
-        <a target='_blank' className='internship-item-link'>{link}</a>
+        <a target='_blank' href={link} className='internship-item-link'>click here to visit and apply</a>
       </div>
     </div>
   )

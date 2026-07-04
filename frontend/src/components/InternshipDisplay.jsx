@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { StoreContext } from '../context/Context'
 import InternshipItem from './InternshipItem'
+import './InternshipDisplay.css'
 function InternshipDisplay() {
   const {internshipList}=useContext(StoreContext);
   return (

@@ -1,0 +1,39 @@
+.internship-item{
+    width: 85%;
+    margin:10px;
+    border-radius: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+    
+}
+
+.internship-item-img{
+    width:100%;
+    border-radius:15px 15px 0px 0px ;
+}
+
+.internship-item-image{
+    height: 18px;   
+}
+
+.internship-item-image:hover{
+    cursor: pointer;
+    background-color: red; 
+    border: 1px red solid;
+    height: 18px;
+}
+
+.internship-item-info{
+    display:flex;;
+    padding: 8px;
+    gap:10px;
+    align-items: center;
+    border:1px solid black;
+}
+.internship-item-link{
+    color: blue;
+}
+.internship-item-link{
+    color:rgb(51, 51, 173);
+    cursor: pointer;
+}

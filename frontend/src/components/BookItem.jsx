@@ -32,7 +32,7 @@ function BookItem({id,book_name,price,description,image,contact_no,email}) {
         <p className="book-item-desc">{description}</p>
         <p className="book-item-price">${price}</p>
         <p className="book-item-contact"><span className='phone'>Phone_no:</span> {contact_no}</p>
-        <p  className="book-item-email">{email}</p>
+        <p className="book-item-email">{email}</p>
       </div>
     </div>
   )
