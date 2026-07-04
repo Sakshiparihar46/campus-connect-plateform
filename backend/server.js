@@ -3,6 +3,7 @@ const app=express();
 import {connectDB} from "./config/db.js";
 import {userRouter} from './routes/userRoutes.js';
 import {bookRouter} from "./routes/bookRoutes.js";
+import {internshipRouter} from "./routes/internshipRoutes.js"
 import cors from 'cors'
 
 
@@ -18,7 +19,7 @@ app.use(cors({
 }));
 app.use("/api/user",userRouter);
 app.use("/api/book",bookRouter);
-
+app.use("/api/internship",internshipRouter);
 
 app.get("/",(req,res)=>{
     res.send("hello");
