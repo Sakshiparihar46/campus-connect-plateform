@@ -20,5 +20,5 @@ const EventSchema=mongoose.Schema({
     }
 });
 
-const EventModel=mongoose.model("Internship",EventSchema);
+const EventModel=mongoose.model("event",EventSchema);
 export default EventModel;

@@ -4,9 +4,9 @@ import authMiddleware from '../middleware/auth.js';
 import {addEvent,removeEvent,listEvent} from "../controllers/eventController.js";
 
 
-export const EventRouter=express.Router();
+export const eventRouter=express.Router();
 const upload=multer({storage:multer.memoryStorage()});
 
-EventRouter.post("/add",authMiddleware,upload.single('image'),addEvent);
-EventRouter.get("/list",listEvent);
-EventRouter.post("/remove",authMiddleware,removeEvent);
+eventRouter.post("/add",authMiddleware,upload.single('image'),addEvent);
+eventRouter.get("/list",listEvent);
+eventRouter.post("/remove",authMiddleware,removeEvent);

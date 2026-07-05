@@ -48,7 +48,7 @@ const addEvent =  async(req,res) => {
 //list 
 const listEvent=async(req,res)=>{
     try {
-        const event=await eventModel.find({});
+        const event=await EventModel.find({});
         res.json({ success: true, data:event });
     } catch (error) {
          console.log(error);
