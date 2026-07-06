@@ -29,8 +29,8 @@ function EventItem({id,image,link,venue}) {
             </div>
             <div className='event-item-info'>
             {token?<img onClick={()=>removeBook(id)} className ="event-item-image" src={assets.cross_icon} alt="" />:<></>}
-            <h3 className='event-item-name'>{venue}</h3>
-            <a href={link}className="event-item-price">click here for register</a>
+            <h3 className='event-item-venue'>{venue}</h3>
+            <a href={link}className="event-item-link">click here for register</a>
           </div>
         </div>
   )
