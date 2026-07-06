@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Events() {
+function AddEvent() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Events() {
   )
 }
 
-export default Events
+export default AddEvent

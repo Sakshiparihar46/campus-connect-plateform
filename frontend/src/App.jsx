@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import Add from './pages/Add'
 import AddInternship from './pages/AddInternship'
 import { ToastContainer, toast } from 'react-toastify';
+import AddEvent from './pages/AddEvent'
 function App() {
   const [showLogin,setShowLogin]=useState(false);
   return (
@@ -27,6 +28,7 @@ function App() {
     <Route path='/collegeEvents' element={<Events/>}/>
     <Route path='/book/add' element={<Add/>}/>
     <Route path='/internship/add' element={<AddInternship/>}/>
+    <Route path='/event/add' element={<AddEvent/>}/>
     </Routes>
     <Footer/>
     </>
