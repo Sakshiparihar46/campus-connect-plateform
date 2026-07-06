@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import {StoreContext} from '../context/Context'
 import { assets } from '../assets/assets'
 import axios from 'axios';
+import './EventItem.css'
 
 function EventItem({id,image,link,venue}) {
     const {token,url,fetchEventList}=useContext(StoreContext);
@@ -27,10 +28,11 @@ function EventItem({id,image,link,venue}) {
             <div>
           <img className ='event-item-img'src={image}></img>
             </div>
-            <div className='event-item-info'>
+            <div className='event-item-info'><div className='event-item-top'>
             {token?<img onClick={()=>removeBook(id)} className ="event-item-image" src={assets.cross_icon} alt="" />:<></>}
-            <h3 className='event-item-venue'>{venue}</h3>
-            <a href={link}className="event-item-link">click here for register</a>
+            <p className='event-item-venue'>venue: {venue}</p>
+            </div>
+          <div><a target="_blank"href={link}className="event-item-link">👉click here for register</a></div>
           </div>
         </div>
   )

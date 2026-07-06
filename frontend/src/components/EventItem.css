@@ -1,0 +1,42 @@
+.event-item{
+    width: 120%;
+    margin:18px;
+    border-radius: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+.event-item-img{
+    width:100%;
+    border-radius:15px 15px 0px 0px ;
+}
+
+.event-item-image{
+    height: 18px;   
+}
+
+.event-item-image:hover{
+    cursor: pointer;
+    background-color: red; 
+    border: 1px red solid;
+    height: 18px;
+}
+.event-item-info{
+    border:1px solid black;
+    padding-left: 10px;
+    padding-bottom: 13px;
+}
+
+.event-item-top{
+    display:flex;
+    gap:8px;
+    align-items: center;
+}
+.event-item-link{
+    color: blue;
+    cursor: pointer;
+    font-size:18px;
+}
+.event-item-link:hover{
+    color: rgb(151, 151, 212);
+}

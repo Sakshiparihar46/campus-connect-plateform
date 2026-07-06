@@ -33,7 +33,7 @@
 .internship-item-link{
     color: blue;
 }
-.internship-item-link{
-    color:rgb(51, 51, 173);
+.internship-item-link:hover{
+    color:rgb(110, 110, 173);
     cursor: pointer;
 }

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { StoreContext } from '../context/Context'
 import EventItem from './EventItem'
+import "./EventDisplay.css"
 
 function EventDisplay() {
     const {eventList}=useContext(StoreContext);
