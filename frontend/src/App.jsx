@@ -11,6 +11,7 @@ import LoginPopup from './components/LoginPopup'
 import Footer from './components/Footer'
 import Add from './pages/Add'
 import AddInternship from './pages/AddInternship'
+import ChatBot from "./components/ChatBot";
 import { ToastContainer, toast } from 'react-toastify';
 import AddEvent from './pages/AddEvent'
 function App() {
@@ -30,6 +31,7 @@ function App() {
     <Route path='/internship/add' element={<AddInternship/>}/>
     <Route path='/event/add' element={<AddEvent/>}/>
     </Routes>
+    <ChatBot />
     <Footer/>
     </>
   )
