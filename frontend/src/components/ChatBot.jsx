@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import axios from "axios";
 import "./ChatBot.css";
+import { StoreContext } from "../context/Context";
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
+  const {url}=useContext(StoreContext);
   const [messages, setMessages] = useState([
     {
       sender: "bot",
@@ -31,8 +33,8 @@ export default function ChatBot() {
     setLoading(true);
 
     try {
-      const res = await axios.post(
-        "http://localhost:3000/api/chat",
+      const res = await axios.post(url+
+        "/api/chat",
         {
           message: userMessage,
         }

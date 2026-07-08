@@ -6,7 +6,6 @@ import Books from './pages/Books'
 import Internships from'./pages/Internships'
 import Home from './pages/Home'
 import Events from './pages/Events'
-import Notes from './pages/Notes'
 import LoginPopup from './components/LoginPopup'
 import Footer from './components/Footer'
 import Add from './pages/Add'
@@ -24,7 +23,6 @@ function App() {
     <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/books' element={<Books/>}/>
-    <Route path='/notes' element={<Notes/>}/>
     <Route path='/internships'element={<Internships/>}/>
     <Route path='/collegeEvents' element={<Events/>}/>
     <Route path='/book/add' element={<Add/>}/>
