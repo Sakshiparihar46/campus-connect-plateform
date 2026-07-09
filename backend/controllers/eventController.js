@@ -65,7 +65,10 @@ const removeEvent=async(req,res)=>{
         }
         if (event?.imagePublicId) {
               await cloudinary.uploader.destroy(event.imagePublicId);
-        }  
+        } 
+        if (String(event.owner) !== String(req.user.id)) {
+        return res.status(403).json({ success: false, message: 'Only owner can remove this event' });
+        } 
         await EventModel.findByIdAndDelete(req.body.id);
         res.json({ success: true, message: "removed" });
     } catch (error) {

@@ -8,7 +8,7 @@ function EventDisplay() {
   return (
     <div className='event-display-list'>
       {eventList.map((item,index)=>{
-        return <EventItem key={index} id={item.id} image={item.image} venue={item.venue} link={item.link}/>
+        return <EventItem key={index} id={item._id} image={item.image} venue={item.venue} link={item.link}/>
       })}
     </div>
   )

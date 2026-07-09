@@ -14,10 +14,13 @@ function InternshipItem({ id, image, link }) {
       if (response.data.success) {
         toast.success(response.data.message);
       } else {
-        toast.error("error");
+        toast.error(response.data?.message||"error");
       }
     } catch (err) {
-      console.log(err);
+      const status = err?.response?.status;
+      const msg = err?.response?.data?.message || err?.message || "Request failed";
+      toast.error(msg);
+      console.error(err);
     }
   }
 

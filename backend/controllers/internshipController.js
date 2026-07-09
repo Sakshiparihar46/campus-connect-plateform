@@ -64,6 +64,9 @@ const removeInternship=async(req,res)=>{
         }
         if (internship?.imagePublicId) {
               await cloudinary.uploader.destroy(internship.imagePublicId);
+        } 
+        if (String(internship.owner) !== String(req.user.id)) {
+        return res.status(403).json({ success: false, message: 'Only owner can access and remove'});
         }  
         await InternshipModel.findByIdAndDelete(req.body.id);
         res.json({ success: true, message: "removed" });

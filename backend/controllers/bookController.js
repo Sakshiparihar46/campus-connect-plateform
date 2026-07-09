@@ -75,7 +75,10 @@ const removeBook = async (req, res) => {
     if (book?.imagePublicId) {
       await cloudinary.uploader.destroy(book.imagePublicId);
     }
-
+    if (String(book.owner) !== String(req.user.id)) {
+      return res.status(403).json({ success: false, message: 'Only owner can remove this book' });
+    }
+    
     await bookModel.findByIdAndDelete(req.body.id);
     res.json({ success: true, message: "removed" });
   } catch (err) {

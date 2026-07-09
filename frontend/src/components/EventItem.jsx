@@ -15,10 +15,13 @@ function EventItem({id,image,link,venue}) {
       if(response.data.success){
         toast.success(response.data.message);
       }else{
-        toast.error("error");
+        toast.error(response.data?.message||"error");
       }
     }catch(err){
-      console.log(err);
+      const status = err?.response?.status;
+      const msg = err?.response?.data?.message || err?.message || "Request failed";
+      toast.error(msg);
+      console.error(err);
     }
   }
 
@@ -29,7 +32,7 @@ function EventItem({id,image,link,venue}) {
           <img className ='event-item-img'src={image}></img>
             </div>
             <div className='event-item-info'><div className='event-item-top'>
-            {token?<img onClick={()=>removeBook(id)} className ="event-item-image" src={assets.cross_icon} alt="" />:<></>}
+            {token?<img onClick={()=>removeEvent(id)} className ="event-item-image" src={assets.cross_icon} alt="" />:<></>}
             <p className='event-item-venue'>venue: {venue}</p>
             </div>
           <div><a target="_blank"href={link}className="event-item-link">👉click here for register</a></div>
