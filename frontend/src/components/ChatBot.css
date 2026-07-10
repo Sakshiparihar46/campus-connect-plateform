@@ -5,7 +5,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #4f46e5;
+  background: rgb(37, 163, 37);;
   color: white;
   display: flex;
   justify-content: center;
@@ -31,14 +31,17 @@
 }
 
 .chat-header {
-  background: #4f46e5;
+  background:rgb(78, 196, 78);;
   color: white;
   padding: 15px;
   display: flex;
   justify-content: space-between;
   font-weight: bold;
 }
-
+.chat-header span:hover{
+  cursor: pointer;
+  color: red;
+}
 .chat-body {
   flex: 1;
   padding: 15px;
@@ -47,7 +50,7 @@
 }
 
 .user-msg {
-  background: #4f46e5;
+  background:rgb(78, 196, 78);
   color: white;
   padding: 10px;
   border-radius: 10px;

@@ -11,7 +11,7 @@ function Books() {
   const {token}=useContext(StoreContext);
   
   const handleAddClick = () => {
-    navigate('/add');
+    navigate('/book/add');
   }
   
   return (

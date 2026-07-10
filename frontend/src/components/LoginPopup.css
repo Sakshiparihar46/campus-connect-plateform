@@ -48,9 +48,12 @@
     font-size: 15px;
     cursor: pointer;
 }
+.login-popup-container button:hover{
+     background-color:rgb(78, 196, 78);
+}
 .login-popup-condition{
     display: flex;
-    align-items: start;
+    align-items: start center;
     gap: 8px;
     margin-top:-15px;
 }
@@ -61,5 +64,8 @@
     color:rgb(78, 184, 226);
     font-weight: 500;
     cursor: pointer;
+}
+.login-popup p span:hover{
+    color:rgb(78, 196, 78);
 }
 
