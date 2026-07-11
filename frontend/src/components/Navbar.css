@@ -27,20 +27,21 @@
     display: flex;
     align-items: center;
     gap:40px;
+    margin-right: 12px;
 }
 
 .navbar Button{
     background:transparent;
     font-size:16px;
     color:#49557e;
-    border: 1px solid rgb(78, 196, 78);;
+    border: 1px solid rgb(157, 88, 223);
     padding: 10px 30px;
     border-radius:50px;
     cursor: pointer;
     transition:0.3s;
 }
 .navbar button:hover{
-     background-color:rgb(159, 245, 78);
+     background-color:rgb(222, 200, 243);
 }
 
 .navbar-right li{

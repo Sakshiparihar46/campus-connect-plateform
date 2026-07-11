@@ -22,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: black;
+    color:rgb(157, 88, 223);
 }
 .login-popup-title img{
     width: 16px;
@@ -44,12 +44,12 @@
     padding: 10px;
     border-radius: 4px;
     color: white;
-    background-color:rgb(78, 196, 78);
+    background-color:rgb(157, 88, 223);
     font-size: 15px;
     cursor: pointer;
 }
 .login-popup-container button:hover{
-     background-color:rgb(78, 184, 226) ;
+     background-color:rgb(180, 132, 224);
 }
 .login-popup-condition{
     display: flex;
@@ -61,11 +61,11 @@
     margin-top: 4px;
 }
 .login-popup p span{
-    color:rgb(78, 196, 78);
+    color:rgb(157, 88, 223);
     font-weight: 500;
     cursor: pointer;
 }
 .login-popup p span:hover{
-    color:rgb(78, 184, 226);
+    color:rgb(173, 159, 211);
 }
 
