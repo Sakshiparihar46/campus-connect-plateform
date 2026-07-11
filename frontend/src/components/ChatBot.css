@@ -14,6 +14,9 @@
   font-size: 28px;
   z-index: 999;
 }
+.chat-icon:hover{
+  transform: scale(1.2);
+}
 
 .chat-box {
   position: fixed;

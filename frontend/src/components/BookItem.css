@@ -1,6 +1,6 @@
 .book-item{
     width: 75%;
-    margin: auto;
+    margin:30px;
     border-radius: 0px 0px 10px #00000015;
     transition: 0.3s;
     animation: fadeIn 1s;
@@ -9,15 +9,17 @@
     width: 100%;
     border-radius:15px 15px 0px 0px ;
 }
+.book-item-img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 .book-item-image{
     height: 12px;   
+    cursor: pointer;
 }
 .book-item-image:hover{
     cursor: pointer;
-    background-color: red; 
-    border: 1px red solid;
-    padding: 1px;
-    height: 15px;
+    transform: scale(1.3);
 }
 
 .book-item-name{

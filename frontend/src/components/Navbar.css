@@ -1,14 +1,16 @@
 .navbar{
-    padding: 10px 0px;
+    padding: 5px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
+    width: 100%;
 }
 .navbar-left{
     display: flex;
     gap: 40px;
     color:#63709b;
-    font-size: 17.5px;
+    font-size: 18.2px;
 }
 .navbar-left a{
     cursor: pointer;
