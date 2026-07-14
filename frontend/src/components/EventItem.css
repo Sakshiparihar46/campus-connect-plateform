@@ -1,5 +1,5 @@
 .event-item{
-    width: 120%;
+    width: 110%;
     margin:18px;
     border-radius: 0px 0px 10px #00000015;
     transition: 0.3s;
@@ -7,7 +7,7 @@
 }
 
 .event-item-img{
-    width:100%;
+    width:95%;
     border-radius:15px 15px 0px 0px ;
 }
 
@@ -27,6 +27,7 @@
     border:1px solid black;
     padding-left: 10px;
     padding-bottom: 13px;
+    width: 95%;
 }
 
 .event-item-top{
