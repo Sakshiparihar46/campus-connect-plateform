@@ -1,6 +1,6 @@
 .internship-item{
     width: 100%;
-    max-width: 280px;
+    max-width: 250px;
     margin: 20px 0;
     border-radius: 15px;
     overflow: hidden;
@@ -23,7 +23,7 @@
     height: 18px;   
 }
 .internship-item-img:hover{
-    transform: scale(1.11);
+    transform: scale(1.05);
 }
 
 .internship-item-image:hover{
