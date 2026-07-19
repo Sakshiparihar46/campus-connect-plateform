@@ -1,14 +1,22 @@
 .event-item{
-    width: 110%;
-    margin:18px;
-    border-radius: 0px 0px 10px #00000015;
+    width: 100%;
+    max-width: 280px;
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: 0.3s;
     animation: fadeIn 1s;
+    display: flex;
+    flex-direction: column;
 }
 
 .event-item-img{
-    width:95%;
-    border-radius:15px 15px 0px 0px ;
+    width:100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
 }
 
 .event-item-img:hover{
@@ -24,10 +32,12 @@
     transform: scale(1.3);
 }
 .event-item-info{
-    border:1px solid black;
-    padding-left: 10px;
-    padding-bottom: 13px;
-    width: 95%;
+    border-top: 1px solid #e5e7eb;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
 }
 
 .event-item-top{

@@ -1,20 +1,29 @@
 .book-item{
-    width: 75%;
-    margin:30px;
-    border-radius: 0px 0px 10px #00000015;
+    width: 100%;
+    max-width: 280px;
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: 0.3s;
     animation: fadeIn 1s;
+    display: flex;
+    flex-direction: column;
 }
 .book-item-img{
     width: 100%;
-    border-radius:15px 15px 0px 0px ;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
 }
 .book-item-img:hover{
     transform: scale(1.1);
     cursor: pointer;
 }
 .book-item-image{
-    height: 12px;   
+    height: 18px;   
+    width: 18px;
     cursor: pointer;
 }
 .book-item-image:hover{
@@ -27,7 +36,11 @@
     color: #49557e;
 }
 .book-item-info{
-    padding: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
 }
 .phone{
     color:#414f7e;
