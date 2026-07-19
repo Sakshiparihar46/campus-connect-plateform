@@ -18,9 +18,12 @@
 }
 
 .add-option-content{
-    color:rgb(59, 71, 233);
+    color:rgb(157, 88, 223);
     font-weight: 500;
     font-size: 18px;
     cursor: pointer;
-    transition: all 0.2s ease;
+}
+
+.add-option-content:hover{
+    color: rgb(191, 179, 202);
 }
